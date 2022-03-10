@@ -1,0 +1,133 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    font-family: 'Rubik', sans-serif;
+}
+
+a:link, a:visited,  a:hover, a:active {
+    color: #1A1E21;
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #1A1E21;
+}
+
+p {
+    color: #808080;
+}
+
+/* HEADER */
+.header {
+    padding: 22px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ededed;
+    box-shadow: 0 5px 20px 0px #1a1e211c;
+}
+
+.header > .container {
+    height: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* HEADER LOGO */
+.header a .logo {
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 100%;
+    width: 135px;
+    float: left;
+}
+
+/* HEADER MENU */
+.header .header-nav {
+    width: 70%;
+}
+.header ul.header-menu {
+    list-style: none;
+    float: left;
+    margin: 0 0 0 30px;
+    padding: 0;
+}
+
+.header ul.header-menu li {
+    float: left;
+    line-height: 40px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.header ul.header-menu li.active {
+    border-bottom: 4px solid #208FBC;
+}
+
+.header ul.header-menu li.active a {
+    color: #208FBC;
+    padding: 8px;
+}
+
+.header ul.header-menu > li > a {
+    color: #1A1E21;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+.header ul.header-menu > li.active > a:hover {
+    color: #237a9c !important;
+}
+
+.header ul.header-menu > li > a:hover {
+    color: #208FBC !important;
+}
+
+/* HEADER LINKS */
+.header-links {
+    margin-left: auto;
+    float: right;
+    line-height: 40px;
+}
+
+.header-links a:hover {
+    background: #17191b;
+}
+
+.header-links a.colored:hover {
+    background: #1e86af;
+}
+
+.header-links a.colored {
+    background: #208FBC;
+    color: #F5F5F5;
+}
+
+.header-links a {
+    background: #1A1E21;
+    color: #F5F5F5;
+    padding: 10px 30px;
+    margin: 0 5px;
+    border-radius: 7px;
+}
+
+/* CONTENT WRAPPER */
+.wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 70px auto 80px auto;
+}
+
+/* FOOTER */
+.footer {
+    color: #A5A5A5;
+    background: #1A1E21;
+    height: 300px;
+    padding: 30px 30px;
+}
+
+.footer .copyright {
+    text-align: center;
+}
