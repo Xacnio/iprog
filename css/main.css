@@ -25,7 +25,7 @@ p {
 
 /* HEADER */
 .header {
-    padding: 22px 30px;
+    padding: 20px 30px;
     background-color: #fff;
     border-bottom: 1px solid #ededed;
     box-shadow: 0 5px 20px 0px #1a1e211c;
@@ -33,7 +33,7 @@ p {
 
 .header > .container {
     height: 40px;
-    max-width: 1280px;
+    max-width: 1240px;
     margin: 0 auto;
     width: 100%;
 }
@@ -63,27 +63,40 @@ p {
     float: left;
     line-height: 40px;
     padding: 0 10px;
-    margin: 0 10px;
-}
-
-.header ul.header-menu li.active {
-    border-bottom: 4px solid #208FBC;
+    margin: 0 5px;
 }
 
 .header ul.header-menu li.active a {
     color: #208FBC;
-    padding: 8px;
 }
 
 .header ul.header-menu > li > a {
     color: #1A1E21;
     font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-    transition: all 1s ease;
+    font-size: 15px;
+    transition: all .3s ease;
+}
+
+.header ul.header-menu li.active a::after {
+    width: 100%;
+}
+
+.header ul.header-menu > li > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #237a9c;
+    transition: width .3s;
+    margin: 0 auto;
 }
 
 .header ul.header-menu > li.active > a:hover {
     color: #237a9c !important;
+}
+
+.header ul.header-menu > li > a:hover::after {
+    width: 100%;
 }
 
 .header ul.header-menu > li > a:hover {
@@ -133,7 +146,7 @@ p {
 
 /* CONTENT WRAPPER */
 .wrapper {
-    max-width: 1280px;
+    max-width: 1240px;
     width: 100%;
     margin: 70px auto 80px auto;
 }
@@ -142,7 +155,7 @@ p {
 .footer {
     color: #A5A5A5;
     background: #1A1E21;
-    height: 300px;
+    height: 20px;
     padding: 30px 30px;
 }
 
