@@ -19,6 +19,10 @@ p {
     color: #808080;
 }
 
+.mobile-disable {
+    display: inherit !important;
+}
+
 /* HEADER */
 .header {
     padding: 22px 30px;
@@ -75,6 +79,7 @@ p {
     color: #1A1E21;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
+    transition: all 1s ease;
 }
 
 .header ul.header-menu > li.active > a:hover {
@@ -111,6 +116,19 @@ p {
     padding: 10px 30px;
     margin: 0 5px;
     border-radius: 7px;
+}
+
+#menu-close {
+    display: none;
+}
+
+.header-bs.mobile-disable {
+    display: inherit !important;
+}
+
+#mobile-nav-toggle {
+    display: none;
+    cursor: pointer;
 }
 
 /* CONTENT WRAPPER */
