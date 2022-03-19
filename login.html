@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ImgSet Challenges</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+	<!-- ICONS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
+		integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- SCRIPTS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- HEADER & MENU -->
+	<div class="header sticky-default">
+		<div class="container">
+			<a href="#">
+				<div class="logo"></div>
+			</a>
+			<i class="fa fa-navicon" id="mobile-nav-toggle"></i>
+			<div class="header-bs mobile-disable">
+				<i class="fa fa-times" id="menu-close"></i>
+				<div class="header-nav">
+					<ul class="header-menu">
+						<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+						<li><a href="challenges.html"><i class="fa fa-list"></i> Challenges</a></li>
+						<li><a href="communities.html"><i class="fa fa-community"></i> Communities</a></li>
+					</ul>
+				</div>
+				<div class="header-links">
+					<a href="register.html"><i class="fa fa-user-plus"></i> Register</a>
+					<a href="login.html" class="colored"><i class="fa fa-sign-in"></i> Login</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- MAIN CONTENT -->
+	<div class="wrapper">
+		<div class="fp-main">
+			<div class="fp-header">Login Your Account</div>
+			<div class="fp-content">
+				<div class="rg-connect">
+					<a href="#" class="rg-with rg-google">
+						<div class="rg-icon"><i class="fa fa-google" aria-hidden="true"></i></div>
+						<div class="rg-text">Connect with Google</div>
+					</a>
+					<a href="#" class="rg-with rg-facebook">
+						<div class="rg-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+						<div class="rg-text">Connect with Facebook</div>
+					</a>
+					<a href="#" class="rg-with rg-apple">
+						<div class="rg-icon"><i class="fa fa-apple" aria-hidden="true"></i></div>
+						<div class="rg-text">Connect with Apple</div>
+					</a>
+				</div>
+				<p class="or-text">OR</p>
+				<form method="post" action="profile.html">
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-input" name="email" id="email" required />
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-input" name="password" id="password" required />
+					</div>
+					<div class="form-group-centered">
+						<button type="submit" class="form-button">Login</button>
+					</div>
+					<div class="form-group-centered">
+						<a href="#">Reset Password</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER & COPYRIGHT -->
+	<div class="footer">
+		<div class="copyright">IMGSET.DEV &copy; 2019-2022, All Rights Reserved.</div>
+	</div>
+
+	<!-- CONTENT SCRIPTS (LOADING AFTER THE CONTENT) -->
+	<script src="js/main.js"></script>
+</body>
+
+</html>
