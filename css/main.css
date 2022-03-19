@@ -340,8 +340,7 @@ p.or-text {
     margin-bottom: 25px;
 }
 
-/* ============== HOME ================ */
-/* COVER*/
+/* HOME - COVER*/
 .home-cover {
     height: 400px;
     margin-top: 85px;
@@ -421,6 +420,7 @@ ul.home-cover-buttons li.active a {
 
 .gallery-image {
     border-radius: 7px;
+    aspect-ratio: 640 / 360;
 }
 
 .gallery-image img {
@@ -428,6 +428,11 @@ ul.home-cover-buttons li.active a {
     width: 100%;
     aspect-ratio: 640 / 360;
     border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image img:hover {
+    transform: scale(1.05);
 }
 
 .gallery-title {
@@ -452,6 +457,7 @@ ul.home-cover-buttons li.active a {
     justify-content: center;
 }
 
+/* MY GRID */
 .col-3 {
     padding: 0 15px;
     width: calc(100% / 4 - 30px);
@@ -460,4 +466,25 @@ ul.home-cover-buttons li.active a {
 
 .clear {
     clear: both;
+}
+
+/* GRADIENT EFFECT ON LOADING */
+.gradient {
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 0%, #dddddd 8%, #eeeeee 16%, #eeeeee 50%, #dddddd 58%, #eeeeee 66%);
+    background-size: 1000px 640px;
+    position: relative;
+}
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
 }
