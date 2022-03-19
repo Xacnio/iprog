@@ -430,6 +430,7 @@ ul.home-cover-buttons li.active a {
     border-radius: 7px;
     transition: transform 0.3s ease;
     display: block; /* fix height problem */
+    border: 1px solid #dfdfdf;
 }
 
 .gallery-image img:hover {
