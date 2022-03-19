@@ -429,6 +429,7 @@ ul.home-cover-buttons li.active a {
     aspect-ratio: 640 / 360;
     border-radius: 7px;
     transition: transform 0.3s ease;
+    display: block; /* fix height problem */
 }
 
 .gallery-image img:hover {
