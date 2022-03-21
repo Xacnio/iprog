@@ -98,13 +98,22 @@ p {
 }
 
 /* HEADER LOGO */
-.header a .logo {
+.header a.logo {
     background-image: url(../images/logo.png);
     background-repeat: no-repeat;
     background-position-y: center;
     height: 100%;
     width: 135px;
     float: left;
+}
+span.logo {
+    height: 100%;
+    width: 135px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
 }
 
 /* HEADER MENU */
