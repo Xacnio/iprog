@@ -29,6 +29,12 @@
         padding-top: 30px;
     }
 
+    .header .header-user {
+        width: 100%;
+        width: fit-content;
+        margin: 20px auto auto auto;
+    }
+
     .header .header-nav {
         width: 100%;
     }
@@ -105,15 +111,40 @@
     }
 
     .col-3 {
-        padding: 20px 15px;
+        padding: 10px 15px;
         width: calc(100% / 2 - 30px);
+    }
+
+    .col-2 { 
+        padding: 10px 15px;
+        width: calc(100% / 3 - 30px);
+    }
+    .gallery-block {
+        margin-bottom: 0;
+    }
+    .profile-block {
+        display: inherit !important;
+    }
+    .profile-menu {
+        width: 100% !important;
+        border-radius: 0;
+    }
+    .profile-content {
+        width: calc(100% - 40px) !important;
     }
 }
 
 
 @media screen and (max-width: 480px) {
     .col-3 {
-        padding: 20px 15px;
-        width: calc(100% / 1 - 30px);
+        padding: 10px 15px;
+        width: calc(100% - 30px);
+    }
+    .col-2 { 
+        padding: 10px 15px;
+        width: calc(100% / 2 - 30px);
+    }
+    .gallery-block {
+        margin-bottom: 0;
     }
 }

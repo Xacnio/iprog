@@ -53,6 +53,7 @@ p {
     border-bottom: 1px solid #ededed;
     box-shadow: 0 5px 20px 0px #1a1e211c;
     transition: opacity 450ms ease;
+    z-index: 5;
 }
 
 .header.sticky-default {
@@ -171,6 +172,79 @@ span.logo {
     color: var(--blue-ncs-dark) !important;
 }
 
+/* HEADER USER */
+.header-user {
+    margin-left: auto;
+    width: 20%;
+    position: relative;
+}
+
+.header-user a {
+    display: flex;
+}
+
+.header-user-name {
+    width: calc(100% - 40px);
+    align-items: center;
+    display: flex;
+    justify-content: right;
+    margin-right: 15px;
+}
+
+.header-user-pic {
+    aspect-ratio: 1 / 1;
+    width: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    border-radius: 50%;
+}
+
+.header-user-pic img {
+    aspect-ratio: 1 / 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+ul.header-user-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1000;
+    min-width: 180px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 13px;
+    text-align: left;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 7px;
+    border: 1px solid #ebebeb;
+}
+
+ul.header-user-dropdown.open {
+    display: inherit !important;
+}
+
+ul.header-user-dropdown > li > a {
+    display: block;
+    padding: 3px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 30px;
+    white-space: nowrap;
+}
+
+ul.header-user-dropdown > li > a:hover {
+    background: #0f7ca1;
+    color: white;
+}
+
+ul.header-user-dropdown > li:not(:last-child) > a {
+    border-bottom: 1px solid #e8e8e8;
+}
+
 /* HEADER LINKS */
 .header-links {
     margin-left: auto;
@@ -219,6 +293,10 @@ span.logo {
     width: 100%;
     margin: 70px auto 80px auto;
     min-height: calc(100vh - 290px);
+}
+
+.wrapper .title {
+    padding: 0 15px;
 }
 
 /* FOOTER */
@@ -427,6 +505,10 @@ ul.home-cover-buttons li.active a {
     width: 100%;
 }
 
+.gallery-block {
+    margin-bottom: 30px;
+}
+
 .gallery-image {
     border-radius: 7px;
     aspect-ratio: 640 / 360;
@@ -444,6 +526,29 @@ ul.home-cover-buttons li.active a {
 
 .gallery-image img:hover {
     transform: scale(1.05);
+}
+
+.gallery-profile {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-profile img {
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: block; /* fix height problem */
+    border: 1px solid #dfdfdf; 
+}
+
+.gallery-profile img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-profile + .gallery-title {
+    text-align: center;
 }
 
 .gallery-title {
@@ -474,6 +579,11 @@ ul.home-cover-buttons li.active a {
     width: calc(100% / 4 - 30px);
     float: left;
 }
+.col-2 {
+    padding: 0 15px;
+    width: calc(100% / 6 - 30px);
+    float: left;
+}
 
 .clear {
     clear: both;
@@ -498,4 +608,110 @@ ul.home-cover-buttons li.active a {
     100%{
         background-position: 468px 0
     }
+}
+
+
+/* PROFILE */
+.profile {
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.profile-head {
+    background: url(../images/cover.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 7px 7px 0 0;
+}
+
+.profile-head-bg {
+    padding: 5px 0;
+    background: #176b8dbf;
+    border-radius: 7px 7px 0 0;
+    display: flex;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 10px 30px;
+}
+
+.profile-pic img {
+    width: 30%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    width: calc(100% - 160px);
+    font-size: 25px;
+    color: white;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+}
+
+.profile-block {
+    display: flex;
+    background: white;
+    border-radius: 0 0 7px 7px;
+    min-height: 500px;
+}
+
+.profile-menu {
+    background: var(--dark-jungle-green);
+    width: 20%;
+    border-radius: 0 0 0 7px;
+}
+
+.profile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-menu ul li > a {
+    display: block;
+    padding: 3px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 30px;
+    white-space: nowrap;
+    color: white;
+    border-bottom: 1px solid #343434;
+    cursor: pointer;
+}
+
+.profile-menu ul li.active > a {
+    background: var(--blue-ncs);
+}
+
+.profile-menu ul li.active:hover > a {
+    background: var(--blue-ncs-dark);
+}
+
+.profile-menu ul li > a:hover {
+    background: #2a2a2a;
+}
+
+.profile-content {
+    padding: 20px;
+    width: 80%;
+}
+
+.profile-content .tab {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.profile-content .tab.open {
+    display: inherit !important;
+}
+
+.profile-content .tab.in {
+    opacity: 1;
 }

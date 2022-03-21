@@ -40,9 +40,15 @@
 						<li><a href="communities.html"><i class="fa fa-community"></i> Communities</a></li>
 					</ul>
 				</div>
-				<div class="header-links">
-					<a href="register.html"><i class="fa fa-user-plus"></i> Register</a>
-					<a href="login.html" class="colored"><i class="fa fa-sign-in"></i> Login</a>
+				<div class="header-user">
+					<a href="profile.html">
+						<div class="header-user-name">John Stone</div>
+						<div class="header-user-pic gradient"><img src="https://picsum.photos/200/200?image=9"></div>
+					</a>
+					<ul class="header-user-dropdown">
+						<li><a href="profile.html">Profile</a></li>
+						<li><a href="index.html">Logout</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -50,41 +56,31 @@
 
 	<!-- MAIN CONTENT -->
 	<div class="wrapper">
-		<div class="fp-main">
-			<div class="fp-header">Login Your Account</div>
-			<div class="fp-content">
-				<div class="rg-connect">
-					<a href="#" class="rg-with rg-google">
-						<div class="rg-icon"><i class="fa fa-google" aria-hidden="true"></i></div>
-						<div class="rg-text">Connect with Google</div>
-					</a>
-					<a href="#" class="rg-with rg-facebook">
-						<div class="rg-icon"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-						<div class="rg-text">Connect with Facebook</div>
-					</a>
-					<a href="#" class="rg-with rg-apple">
-						<div class="rg-icon"><i class="fa fa-apple" aria-hidden="true"></i></div>
-						<div class="rg-text">Connect with Apple</div>
-					</a>
+		<h3 class="title light">Profile</h3>
+		<div class="profile">
+			<div class="profile-head">
+				<div class="profile-head-bg">
+					<div class="profile-pic gradient">
+						<img class="lazy" data-src="https://picsum.photos/200/200?image=9" src="images/pix.gif">
+					</div>
+					<div class="profile-name">John Stone</div>
 				</div>
-				<p class="or-text">OR</p>
-				<form method="get" action="profile.html">
-					<div class="form-group">
-						<label for="email">Email</label>
-						<input type="email" class="form-input" name="email" id="email" required autocomplete="off" />
+			</div>
+			<div class="profile-block">
+				<div class="profile-menu">
+					<ul>
+						<li class="active"><a tab-href="#profile">Profile Info</a></li>
+						<li><a tab-href="#password">Change Password</a></li>
+					</ul>
+				</div>
+				<div class="profile-content">
+					<div class="tab open in" tab-name="#profile">
+						profile
 					</div>
-					<div class="form-group">
-						<label for="password">Password</label>
-						<input type="password" class="form-input" name="password" id="password" required
-							autocomplete="off" />
+					<div class="tab" tab-name="#password">
+						password
 					</div>
-					<div class="form-group-centered">
-						<button type="submit" class="form-button">Login</button>
-					</div>
-					<div class="form-group-centered">
-						<a href="#">Reset Password</a>
-					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>

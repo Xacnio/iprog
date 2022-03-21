@@ -19,7 +19,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 	<!-- SCRIPTS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.lazy.min.js"></script>
 </head>
 
 <body>
@@ -62,7 +63,7 @@
 					</div>
 				</div>
 				<div class="home-cover-column home-cover-image">
-					<img src="images/proccessing.png" alt="prc" />
+					<img class="lazy" data-src="images/proccessing.png" alt="prc" />
 				</div>
 			</div>
 		</div>
@@ -72,10 +73,11 @@
 	<!-- MAIN CONTENT -->
 	<div class="wrapper">
 		<div class="block">
-			<h3 class="light">Popular Challenges</h3>
+			<h3 class="title light">Popular Challenges</h3>
 			<div class="gallery">
 				<div class="gallery-block col-3">
-					<div class="gallery-image gradient"><img src="https://picsum.photos/640/360?s=1" alt="ch" />
+					<div class="gallery-image gradient">
+						<img class="lazy" data-src="https://picsum.photos/640/360?s=1" alt="ch" src="images/pix.gif" />
 					</div>
 					<div class="gallery-title">
 						<a href="challenge.html">Lorem ipsum is placeholder text commonly</a>
@@ -88,7 +90,9 @@
 					</div>
 				</div>
 				<div class="gallery-block col-3">
-					<div class="gallery-image gradient"><img src="https://picsum.photos/640/360?s=2" alt="ch" /></div>
+					<div class="gallery-image gradient">
+						<img class="lazy" data-src="https://picsum.photos/640/360?s=2" alt="ch" src="images/pix.gif" />
+					</div>
 					<div class="gallery-title">
 						<a href="challenge.html">Lorem ipsum is placeholder text commonly</a>
 					</div>
@@ -100,7 +104,9 @@
 					</div>
 				</div>
 				<div class="gallery-block col-3">
-					<div class="gallery-image gradient"><img src="https://picsum.photos/640/360?s=3" alt="ch" /></div>
+					<div class="gallery-image gradient">
+						<img class="lazy" data-src="https://picsum.photos/640/360?s=3" alt="ch" src="images/pix.gif" />
+					</div>
 					<div class="gallery-title">
 						<a href="challenge.html">Lorem ipsum is placeholder text commonly</a>
 					</div>
@@ -112,7 +118,9 @@
 					</div>
 				</div>
 				<div class="gallery-block col-3">
-					<div class="gallery-image gradient"><img src="https://picsum.photos/640/360?s=4" alt="ch" /></div>
+					<div class="gallery-image gradient">
+						<img class="lazy" data-src="https://picsum.photos/640/360?s=4" alt="ch" src="images/pix.gif" />
+					</div>
 					<div class="gallery-title">
 						<a href="challenge.html">Lorem ipsum is placeholder text commonly</a>
 					</div>
@@ -125,7 +133,7 @@
 				</div>
 				<div class="clear"></div>
 				<div class="gallery-end">
-					<button class="form-button">Explore More</button>
+					<a href="challenges.html"><button class="form-button">Explore More</button></a>
 				</div>
 			</div>
 		</div>
@@ -133,7 +141,7 @@
 
 	<!-- FOOTER & COPYRIGHT -->
 	<div class=" footer">
-		<div class="copyright">IMGSET.DEV &copy; 2019-2022, All Rights Reserved.</div>
+		<div class="copyright">Website Name &copy; 2019-2022, All Rights Reserved.</div>
 	</div>
 
 	<!-- CONTENT SCRIPTS (LOADING AFTER THE CONTENT) -->
