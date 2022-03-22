@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    // Sticky Header, sticky status is changing with scroll
     $('#mobile-nav-toggle').click(() => {
         if ($('.header-bs').has('mobile-disable')) {
             $('.header-bs').removeClass('mobile-disable').addClass('mobile-enable');
@@ -9,7 +10,6 @@ $(document).ready(() => {
             $('.header-bs').removeClass('mobile-enable').addClass('mobile-disable');
         }
     })
-
     var sticky = $('.header').height();
     var lastY = null;
     window.onscroll = function () {
@@ -28,12 +28,16 @@ $(document).ready(() => {
             $('.header')./*removeClass('sticky').*/removeClass('sticky-hide');
         }
     };
+
+    // Lazy Image Loading
     $(function () {
         $('img.lazy').Lazy({
             effect: 'fadeIn',
             effectTime: 250,
         });
     });
+
+    // Header Dropdown Menu
     $('.header-user-dropdown').prev().click((e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -44,6 +48,7 @@ $(document).ready(() => {
         headerUserDropdown.removeClass("open");
     });
 
+    // Profile Tabs
     $('.profile-menu a').click((e) => {
         var item = $(e.target)
         if (item.parent('li').hasClass("active")) {
@@ -63,4 +68,35 @@ $(document).ready(() => {
             }, 150)
         }
     })
+
+    // Single photo file input with preview
+    $(".form-input-photo").change(function (e) {
+        var thisInput = $(e.target);
+        var mainDiv = thisInput.parent('div');
+        var textDiv = thisInput.prev('span');
+        thisInput.innerHTML = "";
+        if (this.files.length === 0) {
+            mainDiv.attr('style', "");
+            textDiv.html(textDiv.attr('default'));
+            return
+        }
+        [].forEach.call(this.files, function (file, index) {
+            var reader = new FileReader();
+            reader.onload = (function (theFile) {
+                return function (e) {
+                    let fileName = file.name;
+                    if (fileName.length > 20) {
+                        const ext = fileName.split(/[\s.]+/)
+                        const extension = ext[ext.length - 1]
+                        const fileNameS = fileName.split('.').slice(0, -1).join('.');
+                        fileName = fileNameS.substring(0, 16) + "." + extension
+                    }
+                    mainDiv.attr('style', "background-image: -webkit-linear-gradient(rgb(0 195 255 / 63%), rgb(0 0 0 / 63%)), url(" + e.target.result + ");color: white !important;");
+                    if (!textDiv.attr("default")) textDiv.attr("default", textDiv.html());
+                    textDiv.html(fileName);
+                };
+            })(file);
+            reader.readAsDataURL(file);
+        });
+    });
 })

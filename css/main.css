@@ -316,8 +316,11 @@ ul.header-user-dropdown > li:not(:last-child) > a {
 label {
     color: black;
 }
-label + input {
+label + input, label + textarea, label + div {
     margin-top: 5px;
+}
+textarea.form-input {
+    resize: vertical;
 }
 .form-group {
     margin-bottom: 20px;
@@ -341,6 +344,41 @@ label + input {
     line-height: 30px;
     border: 1px solid #cfcfcf;
     border-radius: 7px;
+}
+.form-photo-select span {
+    font-weight: 100;
+}
+.form-photo-select {
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+}
+.form-photo-select.ch {
+    aspect-ratio: 640 / 360;
+}
+.form-photo-select.pp {
+    aspect-ratio: 300 / 300;
+    border-radius: 50%;
+}
+.form-input-photo {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 19;
+    cursor: pointer;
 }
 .form-input:focus {
     outline: 1px solid #208FBC;
@@ -439,7 +477,7 @@ p.or-text {
 
 .home-cover-bg {
     height: 400px;
-    background: #176b8dbf;
+    background: -webkit-linear-gradient(#0f7ca1d1, rgb(0 0 0 / 74%));
 }
 
 .home-cover-wrapper {
