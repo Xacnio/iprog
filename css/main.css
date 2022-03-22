@@ -349,7 +349,8 @@ textarea.form-input {
     font-weight: 100;
 }
 .form-photo-select {
-    height: 200px;
+    max-height: 200px;
+    max-width: 100%;
     text-align: center;
     cursor: pointer;
     position: relative;
