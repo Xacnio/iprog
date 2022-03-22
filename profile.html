@@ -71,6 +71,7 @@
 					<ul>
 						<li class="active"><a tab-href="#profile">Profile Info</a></li>
 						<li><a tab-href="#password">Change Password</a></li>
+						<li><a tab-href="#communities">Communities</a></li>
 					</ul>
 				</div>
 				<div class="profile-content">
@@ -78,7 +79,52 @@
 						profile
 					</div>
 					<div class="tab" tab-name="#password">
-						password
+						<form method="get" action="profile.html">
+							<div class="form-group">
+								<label for="oldpassword">Old Password</label>
+								<input type="password" class="form-input" name="oldpassword" id="oldpassword" required
+									autocomplete="off" />
+							</div>
+							<div class="form-group">
+								<label for="newpassword">New Password</label>
+								<input type="password" class="form-input" name="newpassword" id="newpassword" required
+									autocomplete="off" />
+							</div>
+							<div class="form-group">
+								<label for="newpassword2">New Password (again)</label>
+								<input type="password" class="form-input" name="newpassword2" id="newpassword2" required
+									autocomplete="off" />
+							</div>
+							<div class="form-group-centered">
+								<button type="submit" class="form-button">Save</button>
+							</div>
+						</form>
+					</div>
+					<div class="tab" tab-name="#communities">
+						<div class="gallery">
+							<div class="gallery-block col-3">
+								<div class="gallery-image gradient">
+									<img class="lazy" data-src="https://picsum.photos/640/360?s=1" alt="ch"
+										src="images/pix.gif" />
+								</div>
+								<div class="gallery-title">
+									<a href="challenge.html">Lorem ipsum is placeholder text commonly</a>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<hr>
+						<h3 class="light">Create Community</h3>
+						<form method="get" action="community.html">
+							<div class="form-group">
+								<label for="cname">Community Name</label>
+								<input type="text" class="form-input" name="cname" id="cname" required
+									autocomplete="off" />
+							</div>
+							<div class="form-group">
+								<button type="submit" class="form-button">Create</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

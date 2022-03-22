@@ -231,9 +231,10 @@ ul.header-user-dropdown > li > a {
     display: block;
     padding: 3px 10px;
     clear: both;
-    font-weight: normal;
+    font-weight: 100;
     line-height: 30px;
     white-space: nowrap;
+    color: black;
 }
 
 ul.header-user-dropdown > li > a:hover {
@@ -655,22 +656,32 @@ ul.home-cover-buttons li.active a {
 }
 
 .profile-block {
-    display: flex;
     background: white;
     border-radius: 0 0 7px 7px;
-    min-height: 500px;
 }
 
 .profile-menu {
-    background: var(--dark-jungle-green);
-    width: 20%;
-    border-radius: 0 0 0 7px;
+    display: flex;
+    background: #183f4e;
 }
 
 .profile-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    margin-top: 10px;
+    display: flex;
+    overflow-x: auto;
+    margin-left: 5px;
+}
+
+.profile-menu ul::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-menu ul li {
+    float: left;
+    margin: 0 7px;
 }
 
 .profile-menu ul li > a {
@@ -681,8 +692,9 @@ ul.home-cover-buttons li.active a {
     line-height: 30px;
     white-space: nowrap;
     color: white;
-    border-bottom: 1px solid #343434;
     cursor: pointer;
+    border-radius: 7px 7px 0 0;
+    background: var(--dark-jungle-green);
 }
 
 .profile-menu ul li.active > a {
@@ -699,7 +711,12 @@ ul.home-cover-buttons li.active a {
 
 .profile-content {
     padding: 20px;
-    width: 80%;
+    min-height: 500px;
+}
+
+.profile-content hr {
+    border: none;
+    border-top: 1px dotted #a9a9a9;
 }
 
 .profile-content .tab {
