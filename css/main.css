@@ -476,9 +476,22 @@ p.or-text {
     background-position: center center;
 }
 
+.home-cover.blur {
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+}
+
 .home-cover-bg {
     height: 400px;
     background: -webkit-linear-gradient(#0f7ca1d1, rgb(0 0 0 / 74%));
+}
+
+.home-cover-bg2 {
+    height: 400px;
+    background: #00000073;
 }
 
 .home-cover-wrapper {
@@ -487,6 +500,23 @@ p.or-text {
     width: 100%;
     height: 400px;
     display: flex;
+}
+.home-cover-wrapper2 {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 85px;
+}
+
+.home-cover-wrapper2 > .home-cover-column > .home-cover-content {
+    padding: 75px 0 0 0 !important;
+    height: 325px;
 }
 
 .home-cover-content h1, .home-cover-content p {
@@ -507,9 +537,55 @@ p.or-text {
     align-items: center;
 }
 
+
 .home-cover-image img {
     max-height: 300px;
     max-width: 400px;
+}
+
+.home-cover-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.home-cover-pic img {
+    max-height: 250px;
+    max-width: 250px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 250px;
+    height: 250px;
+}
+
+.home-cover-pic span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.home-cover-pic a {
+    border-radius: 50%;
+    position: relative;
+    color: white;
+}
+
+.home-cover-pic a:hover {
+    color: var(--blue-ncs);
+}
+
+
+.home-cover-pic-text {
+    background: #000000b5;
+    position: absolute;
+    top: 0;
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
 }
 
 .home-cover-column {
@@ -770,4 +846,35 @@ ul.home-cover-buttons li.active a {
 
 .profile-content .tab.in {
     opacity: 1;
+}
+
+/* SLIDE GALLERY */
+
+
+.photo-gallery {
+
+}
+.photo-gallery > .photos {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.photo-gallery > .photos > .gallery-block {
+    padding: 0 15px;
+    width: 100% !important;
+    flex: 1 0 calc(25% - 30px);
+    margin-bottom: 0 !important;
+}
+
+ul.slide-buttons {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul.slide-buttons li {
+    float: left;
+    margin: 0 5px;
 }

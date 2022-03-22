@@ -99,4 +99,20 @@ $(document).ready(() => {
             reader.readAsDataURL(file);
         });
     });
+
+    // Photo Gallery Buttons
+    $('ul.slide-buttons li > button').click((e) => {
+        var photos = $(e.currentTarget).parent().parent().prev('.photos')
+        var photo = $('.photos > .gallery-block').outerWidth();
+        var pscrollLeft = photos.scrollLeft();
+        var prev = ($(e.currentTarget).attr("action") === "prev") ? true : false;
+        if (prev) {
+            var newPos = pscrollLeft - photo;
+            photos.stop().animate({ scrollLeft: newPos }, 300)
+        } else {
+            var newPos = pscrollLeft + photo;
+            photos.stop().animate({ scrollLeft: newPos }, 300)
+        }
+        $("html,body").trigger("scroll");
+    })
 })

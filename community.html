@@ -70,32 +70,35 @@
 				<div class="profile-menu">
 					<ul>
 						<li class="active"><a tab-href="#profile">Info</a></li>
-						<li><a tab-href="#password">Change Password</a></li>
+						<li><a tab-href="#edit">Edit</a></li>
 						<li><a tab-href="#challenges">Challenges</a></li>
 					</ul>
 				</div>
 				<div class="profile-content">
 					<div class="tab open in" tab-name="#profile">
-						profile
+						About community...
 					</div>
-					<div class="tab" tab-name="#password">
-						<form method="get" action="profile.html">
+					<div class="tab" tab-name="#edit">
+						<h3 class="light">Edit Community</h3>
+						<form method="get" action="community.html">
 							<div class="form-group">
-								<label for="oldpassword">Old Password</label>
-								<input type="password" class="form-input" name="oldpassword" id="oldpassword" required
-									autocomplete="nope" />
+								<div class="form-photo-select pp"
+									style="background-image: -webkit-linear-gradient(rgb(0 195 255 / 63%), rgb(0 0 0 / 63%)), url(https://picsum.photos/200/200?image=9);color: white !important;">
+									<span>Select a photo</span>
+									<input type="file" id="chphoto" name="chphoto" class="form-input-photo"
+										accept="image/*">
+								</div>
 							</div>
 							<div class="form-group">
-								<label for="newpassword">New Password</label>
-								<input type="password" class="form-input" name="newpassword" id="newpassword" required
-									autocomplete="nope" />
+								<label for="name">Name</label>
+								<input type="text" class="form-input" name="name" id="name" required autocomplete="nope"
+									value="Community Name" />
 							</div>
 							<div class="form-group">
-								<label for="newpassword2">New Password (again)</label>
-								<input type="password" class="form-input" name="newpassword2" id="newpassword2" required
-									autocomplete="nope" />
+								<label for="cdesc">Description</label>
+								<textarea name="cdesc" id="cdesc" class="form-input">About community...</textarea>
 							</div>
-							<div class="form-group-centered">
+							<div class="form-group">
 								<button type="submit" class="form-button">Save</button>
 							</div>
 						</form>
