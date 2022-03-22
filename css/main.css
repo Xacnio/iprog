@@ -849,14 +849,10 @@ ul.home-cover-buttons li.active a {
 }
 
 /* SLIDE GALLERY */
-
-
-.photo-gallery {
-
-}
 .photo-gallery > .photos {
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
+    padding: 15px 0;
 }
 
 .photo-gallery > .photos > .gallery-block {
@@ -876,5 +872,4 @@ ul.slide-buttons {
 
 ul.slide-buttons li {
     float: left;
-    margin: 0 5px;
 }
