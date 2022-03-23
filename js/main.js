@@ -17,15 +17,20 @@ $(document).ready(() => {
             const currentY = window.pageYOffset;
             if (lastY != null) {
                 if (currentY >= lastY) {
+                    $('.header').css('display', 'block')
                     $('.header').addClass('sticky').removeClass("sticky-hide");
                 } else if (!$('.header-bs').hasClass('mobile-enable')) {
                     $('.header').removeClass('sticky').addClass("sticky-hide");
+                    hhtimer = setTimeout(() => {
+                        if ($('.header').hasClass("sticky")) $('.header').css('display', 'none')
+                    }, 500);
                 }
             }
             lastY = window.pageYOffset;
 
         } else if (!$('.header-bs').hasClass('mobile-enable')) {
             $('.header')./*removeClass('sticky').*/removeClass('sticky-hide');
+            $('.header').css('display', 'block');
         }
     };
 

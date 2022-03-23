@@ -10,6 +10,9 @@
 }
 
 /* GLOBAL */
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -44,6 +47,10 @@ p {
 
 .light {
     font-weight: 100;
+}
+
+hr {
+    border-top: 1px solid #dfdfdf;
 }
 
 /* HEADER */
@@ -192,7 +199,8 @@ span.logo {
 }
 
 .header-user-pic {
-    aspect-ratio: 1 / 1;
+    position: relative;
+    padding-top: 40px;
     width: 40px;
     align-items: center;
     display: flex;
@@ -201,7 +209,10 @@ span.logo {
 }
 
 .header-user-pic img {
-    aspect-ratio: 1 / 1;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -345,11 +356,19 @@ textarea.form-input {
     border: 1px solid #cfcfcf;
     border-radius: 7px;
 }
+.form-photo {
+    max-width: 320px;
+}
 .form-photo-select span {
     font-weight: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form-photo-select {
-    max-height: 200px;
     max-width: 100%;
     text-align: center;
     cursor: pointer;
@@ -363,11 +382,20 @@ textarea.form-input {
     background-position: center center;
 }
 .form-photo-select.ch {
-    aspect-ratio: 640 / 360;
+    width: 640px;
+    padding-top: 56.25%;
 }
 .form-photo-select.pp {
-    aspect-ratio: 300 / 300;
+    max-height: 200px;
+    max-width: 200px;
+    height: 200px;
     border-radius: 50%;
+}
+.form-photo-select.cp {
+    width: 640px;
+    padding-top: 56.25%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .form-input-photo {
     display: block !important;
@@ -627,17 +655,26 @@ ul.home-cover-buttons li.active a {
 
 .gallery-image {
     border-radius: 7px;
-    aspect-ratio: 640 / 360;
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
 }
 
 .gallery-image img {
     max-width: 100%;
+    max-height: 100%;
     width: 100%;
-    aspect-ratio: 640 / 360;
+    object-fit: cover;
+    object-position: center center;
     border-radius: 7px;
     transition: transform 0.3s ease;
     display: block; /* fix height problem */
     border: 1px solid #dfdfdf;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .gallery-image img:hover {
@@ -646,17 +683,26 @@ ul.home-cover-buttons li.active a {
 
 .gallery-profile {
     border-radius: 50%;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
 }
 
 .gallery-profile img {
     max-width: 100%;
+    max-height: 100%;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center center;
     border-radius: 50%;
     transition: transform 0.3s ease;
     display: block; /* fix height problem */
     border: 1px solid #dfdfdf; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .gallery-profile img:hover {
@@ -872,4 +918,71 @@ ul.slide-buttons {
 
 ul.slide-buttons li {
     float: left;
+}
+
+/* USER LIST MINI */
+.user-list-mini {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-list-mini a {
+    display: contents;
+}
+
+.user-list-mini-cn {
+    margin: 5px 15px;
+    flex: 0 0 5%;
+    padding-top: 5%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.user-list-mini-cn img {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tooltip */
+.tooltip {
+    background: #17191b;
+    border-radius: 7px;
+    border: 1px solid #118ab2;
+    cursor: default;
+    font-size: 15px;
+    visibility: hidden;
+    width: 100px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -52px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+a:hover > div > .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
