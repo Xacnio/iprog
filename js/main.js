@@ -12,15 +12,18 @@ $(document).ready(() => {
     })
     var sticky = $('.header').height();
     var lastY = null;
+    var hhtimer = null;
     window.onscroll = function () {
         if (window.pageYOffset > sticky) {
             const currentY = window.pageYOffset;
             if (lastY != null) {
                 if (currentY >= lastY) {
+                    clearTimeout(hhtimer);
                     $('.header').css('display', 'block')
                     $('.header').addClass('sticky').removeClass("sticky-hide");
                 } else if (!$('.header-bs').hasClass('mobile-enable')) {
                     $('.header').removeClass('sticky').addClass("sticky-hide");
+                    clearTimeout(hhtimer);
                     hhtimer = setTimeout(() => {
                         if ($('.header').hasClass("sticky")) $('.header').css('display', 'none')
                     }, 500);
